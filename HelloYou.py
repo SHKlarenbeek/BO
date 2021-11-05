@@ -136,6 +136,7 @@ def planeride():
         schiphol()
 
 def work():
+    ods = random.randint(0, 100)
     print("You decide to find a job to earn some money. After looking around you found 2 options.")
     print("A. You take job from the local gang")
     print("B. You decide to work a day on a construction site.")
@@ -147,12 +148,18 @@ def work():
         print("You gun down about 5 people before one of the construction worker grabs their gun and shoots you.")
         print("Sadly you have died.")
         playAgain()
-    elif work1 == 'b':
+    elif work1 == 'b'and ods <50:
         print("You arrive at your job and after an hour or so you see some people walk up to the the construction site.")
         print("Suddenly one of them grabs a gun and starts shooting people.")
         print("You try to take cover but you're just to late.")
         print("You have sadly bled out and died.")
         playAgain()
+    elif work1 == 'b' and ods >=50:
+        print("After about 6 hours of work you made enough money to buy the plane ticket.")
+        print("You also heard that another construction site nearby had a shootout en a lot of people died.")
+        print("Lucky for you that you worked on a different site.")
+        print("You go back to the airport and buy a plane ticket.")
+        planeride()
 
 def SneakPlane():
     global parentsroad
@@ -384,11 +391,11 @@ def BoatTrip():
 
 def cargosick():
     ods = random.randint(0, 100)
-    if ods <80:
+    if ods <70:
         print("You have succesfully made the trip to the Netherlands.")
         print("You sneak out of the boat before people check the cargo.")
         NederlandPort()
-    elif ods >=80:
+    elif ods >=70:
         print("You have fallen teribly ill")
         print("you look into the cargo and see it holds uranium.")
         print("You have died from radiantion poisoning.")
