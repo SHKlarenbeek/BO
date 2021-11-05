@@ -367,7 +367,7 @@ def BoatTrip():
     print("You find a place to sit on the boat and look out the window waiting for the boat to leave.")
     print("After 10 min the boat departes the journey begins.")
     print("After 2 hours on the boat staff members come by and ask if you want something to eat and drink.")
-    print("You currently have $"+str(money)+"in your wallet")
+    print("You currently have $"+str(money)+" in your wallet")
     print("A. You order somethin to eat and drink. cost $5")
     print("B. You tell them you don't need anything.")
     foodanddrinks = input("")
@@ -460,6 +460,7 @@ def FindingABoat():
         sneakonboat()
 
 def port():
+    global money
     print("You arrive at the port in Iran. what do you wanne do first.")
     print("A. Go and find a boat.")
     print("B. Go and sleep on a nearby bench.")
@@ -468,9 +469,16 @@ def port():
         print("You decide to look for a boat.")
         FindingABoat()
     elif port1 == 'b':
-        print("You find a nice bench to take a nap on.")
-        print("After waking up you decide to look for a boat.")
-        FindingABoat()
+        ods = random.randint(0, 100)
+        if ods <=50:
+            print("You find a nice bench to take a nap on.")
+            print("After waking up you decide to look for a boat.")
+            FindingABoat()
+        elif ods >50:
+            print("While you were sleeping someone stole all your money.")
+            print("You decide to try and find a boat anyways.")
+            money = 0
+            FindingABoat()
 
 
 def boothrobberyForBoat():
