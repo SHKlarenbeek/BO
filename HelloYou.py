@@ -311,7 +311,7 @@ def walk():
 
 
 def plane():
-    print("Now that you decide on taking a plan you have to go there. How do you plan on getting there.")
+    print("Now that you decide on taking a plane you have to go there. How do you plan on getting there.")
     print("A. Walking there")
     print("B. getting a cab")
     print("C. try something else")
