@@ -86,7 +86,7 @@ def army():
         playAgain()
 
 def NLwork():
-    print("You arrive at the temp agency and the tell you there are 3 jobs available.")
+    print("You arrive at the temp agency and they tell you there are 3 jobs available.")
     print("A. Grocery store employe 36 hours a week and you earn $2000 a month")
     print("B. Employe in a hardware store 38 hours and you earn $2200 a month")
     print("C. You could join the army and get a paid study you would earn $1000 a month")
